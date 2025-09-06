@@ -3,13 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plant Leaf Disease Detection</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Plant Disease Detection</title>
 </head>
 <body>
-    <h1>Plant Leaf Disease Detection</h1>
-    <p>Click the button below to open the app:</p>
-    <a href="https://plant-leaf-disease-detection-4fvgaktpxan3xgata4fu6c.streamlit.app/" target="_blank">
-        <button style="padding:10px 20px; font-size:16px;">Open App</button>
-    </a>
+    <div class="header">
+        <h1>Plant Disease Detection</h1>
+    </div>
+
+    <div class="container">
+        <div class="main-section">
+            <div class="plant-icon">🌱</div>
+            <h2>Detect Plant Diseases Instantly</h2>
+            <p class="description">
+                Our machine learning model can identify various plant diseases from leaf images. 
+                Simply upload a photo of your plant's leaf and get instant diagnosis with treatment recommendations.
+            </p>
+
+            <div class="features">
+                <div class="feature-card">
+                    <h3>Fast Detection</h3>
+                    <p>Get results in seconds with our trained AI model</p>
+                </div>
+                <div class="feature-card">
+                    <h3>High Accuracy</h3>
+                    <p>Reliable disease identification with detailed analysis</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Easy to Use</h3>
+                    <p>Simple upload process, no technical knowledge required</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Treatment Tips</h3>
+                    <p>Get actionable recommendations for plant care</p>
+                </div>
+            </div>
+
+            <a href="https://plant-leaf-disease-detection-4fvgaktpxan3xgata4fu6c.streamlit.app/" class="detect-button" target="_blank">
+                Start Detection
+            </a>
+        </div>
+
+        <div class="info-section">
+            <h2>How It Works</h2>
+            <p>Our system uses advanced machine learning to analyze plant leaf images and identify potential diseases.</p>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Upload Image</h3>
+                    <p>Take a clear photo of the affected plant leaf and upload it to our system</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>AI Analysis</h3>
+                    <p>Our trained model analyzes the image to identify diseases and symptoms</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Get Results</h3>
+                    <p>Receive diagnosis results with confidence scores and treatment suggestions</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Plant Disease Detection System | Student Project</p>
+    </div>
+
+    <script>
+        // Simple button click animation
+        document.querySelector('.detect-button').addEventListener('click', function(e) {
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+            }, 150);
+        });
+
+        // Simple feature card hover effect
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+                this.style.boxShadow = '0 4px 15px rgba(0,0,0,0.1)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = 'none';
+            });
+        });
+    </script>
 </body>
 </html>
